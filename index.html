@@ -7,9 +7,78 @@
     <title>Document</title>
     <!-- google fonts  -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:500|Vollkorn:400,400i" rel="stylesheet">
+    <!-- my style -->
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
-    
+    <!-- fixed navbar -->
+    <header class="header-fixed" id="mainHeader ">
+        <h1 class="brand"> <a href="#home">ABACHOUCH</a> </h1>
+        <ul class="nav">
+            <li> <a href="#" class="active">Home</a> </li>
+            <li> <a href="#" >PROJECTS</a> </li>
+            <li> <a href="#">ABOUT</a> </li>
+            <li> <a href="#">BLOG</a> </li>
+        </ul>
+        <div id="menuToggle"  class="menu-toggle" aria-valuenow="false" aria-controls="Menu Toggle button">MENU</div>
+    </header>
+
+    <!-- collapsed Menu -->
+    <nav class="menu active ">
+        <ul class="menu__nav-left">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">POJECTS</a>
+            </li>
+            <li>
+                <a href="#">ABOuT</a>
+            </li>
+            <li>
+                <a href="#">Video</a>
+                <ul class="menu__nav__nav">
+                    <li>
+                        <a href="#">Totorial</a>
+                        <li>
+                            <a href="#">Animations</a>
+                </ul>
+                </li>
+        </ul>
+        <ul class="menu__nav-right">
+            <li>
+                <a href="#">Blog</a>
+            </li>
+            <ul class="menu__nav__nav">
+                <li>
+                    <a href="#">Totorial</a>
+                    <li>
+                        <a href="#">Updates</a>
+                        <li>
+                            <a href="#">New Projects</a>
+                            <li>
+                                <a href="#">tricks</a>
+            </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- pages slider -->
+    <div class="container--box " id="slide">
+        <section class="slide__item" id="Home">
+            <div class="jumbotron">
+                <h2>HELLO MY NAME IS ABACHOUCH YOUSSOUF</h2>
+                <h1>WEB DEVELOPER & DIGITAL DESIGNER</h1>
+            </div>
+            
+        </section>
+        <section class="slide__item" id="About">
+            world
+        </section>
+
+    </div>
+
+
 </body>
 </html>
