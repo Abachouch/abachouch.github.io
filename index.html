@@ -5,136 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ABACHOUCH | Front End Web Develoepr &amp; Designer</title>
     <!-- google fonts  -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:500|Vollkorn:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Vollkorn:400,700" rel="stylesheet">
     <!-- my style -->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-
     <!-- fixed navbar -->
-    <header class="header-fixed" id="mainHeader ">
-        <h1 class="brand">
-            <a href="#home">ABACHOUCH</a>
-        </h1>
+    <header class="navbar" id="navbar" role="menubar">
+        <h1 class="brand">ABACHOUCH</h1>
         <ul class="nav">
-            <li>
-                <a href="#" class="active">Home</a>
-            </li>
-            <li>
-                <a href="#">PROJECTS</a>
-            </li>
-            <li>
-                <a href="#">ABOUT</a>
-            </li>
             <li>
                 <a href="#">BLOG</a>
             </li>
+            <li>
+                <a href="#">LABELS</a>
+            </li>
+            <li>
+                <a href="#">POSTS</a>
+            </li>
         </ul>
-        <div id="menuToggle" class="menu-toggle" aria-valuenow="false" aria-controls="Menu Toggle button">MENU</div>
-    </header>
-
-    <!-- collapsed Menu -->
-    <nav class="menu active ">
-        <ul class="menu__nav-left">
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">POJECTS</a>
-            </li>
-            <li>
-                <a href="#">ABOuT</a>
-            </li>
-            <li>
-                <a href="#">Video</a>
-                <ul class="menu__nav__nav">
-                    <li>
-                        <a href="#">Totorial</a>
-                        <li>
-                            <a href="#">Animations</a>
-                </ul>
+        <div class="toggle" id="toggle" role="button">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="menu" id="menu" role="menu">
+            <header class="menu__search-aria">
+                <input class="menu__search" type="search" name="search" placeholder="Search" id="search">
+            </header>
+            <ul class="menu__nav">
+                <li class="active">
+                    <a href="#">BLOG</a>
                 </li>
-        </ul>
-        <ul class="menu__nav-right">
-            <li>
-                <a href="#">Blog</a>
-            </li>
-            <ul class="menu__nav__nav">
                 <li>
-                    <a href="#">Totorial</a>
-                    <li>
-                        <a href="#">Updates</a>
-                        <li>
-                            <a href="#">New Projects</a>
-                            <li>
-                                <a href="#">tricks</a>
+                    <a href="#">LABELS</a>
+                </li>
+                <li>
+                    <a href="#">POSTS</a>
+                </li>
             </ul>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- pages slider -->
-    <div class="container--box " id="slide">
-        <section class="slide__item hide" id="Home">
-            <div class="jumbotron">
-                <h2>HELLO MY NAME IS ABACHOUCH YOUSSOUF</h2>
-                <h1>WEB DEVELOPER & DIGITAL DESIGNER</h1>
-            </div>
-        </section>
-
-        <!-- section about -->
-        <section class="slide__item hide" id="About">
-            <div class="about-container">
-                <div class="image">
-                    <ul class="social-icons">
-                        <li>
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="text">
-                    <p>Hello, my name is Youssouf Abachouch and I’m a Front End Wed developer. I’ve a passion for the beauty,
-                        whether simple or extravagant. I also love UI.UX design and typography. </p>
-                    <p>I was born in Agadir, but now I live in Fes. So, I’m Morrocan but i like to call my self a citizens of
-                        the world, it helps me to learn more from other cultures , that why i choose to work as a freelancer,
-                        it makes me befriend people arond the world .</p>
-                    <p>
-                        I gratueded @ Fes’s Technology institu where I discovered my passion for problem solving declined to Web Development. I am
-                        currently working as afreelancer .</p>
-                    <p>And please, don't forget ... may the force be with you!</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- section Portfolio -->
-        <section class="slide__item " id="selected_projects">
-            <h2 class="all-projects"><a href="#">ALL PROJECTS</a></h3>
-            <div class="project-container">
-                <div class="project" id="">
-                    <h3 class="title">EcoBill</h3>
-                </div>
-                <div class="project">
-                    <h3 class="title">Infinix Theme</h3>
-                </div>
-
-                <div class="project">
-                    <h3 class="title">Color symantic</h3>
-                </div>
-                <div class="project">
-                    <h3 class="title">Zipline WPF plugin</h3>
-                </div>
-            </div>
-               
-        </section>
-
-    </div>
-
+            <footer>
+                <ul class="soc-icons">
+                    <li><a href="http://#"><img src="imgs/soc_icons/facebook.svg" alt="Facebook"></a></li>
+                    <li><a href="http://#"><img src="imgs/soc_icons/linkedin.svg" alt="LinkedIn"></a></li>
+                    <li><a href="http://#"><img src="imgs/soc_icons/twitter.svg" alt="Twitter"></a></li>
+                    <li><a href="http://#"><img src="imgs/soc_icons/dribbble.svg" alt="Dribbble"></a></li>
+                    <li><a href="http://#"><img src="imgs/soc_icons/instagram.svg" alt="Instagram"></a></li>
+                    <li><a href="http://#"><img src="imgs/soc_icons/github.svg" alt="Github"></a></li>
+                    <li><a href="http://#"><img src="imgs/soc_icons/youtube.svg" alt="Youtube"></a></li>
+                    
+                </ul>
+            </footer>
+        </nav>
+    </header>
 </body>
+<script>
+    document.getElementById('toggle').addEventListener('click', function () {
+        const menu = document.getElementById('menu');
+        console.log(menu.style.right) ;
+        menu.style.right = (menu.style.right == '0px') ? '-380px' : '0px';
+        document.getElementById('toggle').classList.toggle('close');
+    });
+
+
+
+var myNav = document.getElementById('mynav');
+window.onscroll = function () { 
+    "use strict";
+    if (document.body.scrollTop >= 200 ) {
+        document.getElementById('navbar').classList.add('bg');
+    } 
+    else {
+        document.getElementById('navbar').classList.remove('bg');
+    }
+};
+
+
+</script>
 
 </html>
