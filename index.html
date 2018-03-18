@@ -49,59 +49,126 @@
             </ul>
             <footer>
                 <ul class="soc-icons">
-                    <li><a href="http://#"><img src="imgs/soc_icons/facebook.svg" alt="Facebook"></a></li>
-                    <li><a href="http://#"><img src="imgs/soc_icons/linkedin.svg" alt="LinkedIn"></a></li>
-                    <li><a href="http://#"><img src="imgs/soc_icons/twitter.svg" alt="Twitter"></a></li>
-                    <li><a href="http://#"><img src="imgs/soc_icons/dribbble.svg" alt="Dribbble"></a></li>
-                    <li><a href="http://#"><img src="imgs/soc_icons/instagram.svg" alt="Instagram"></a></li>
-                    <li><a href="http://#"><img src="imgs/soc_icons/github.svg" alt="Github"></a></li>
-                    <li><a href="http://#"><img src="imgs/soc_icons/youtube.svg" alt="Youtube"></a></li>
-                    
+                    <li>
+                        <a href="http://#">
+                            <img src="imgs/soc_icons/facebook.svg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://#">
+                            <img src="imgs/soc_icons/linkedin.svg" alt="LinkedIn">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://#">
+                            <img src="imgs/soc_icons/twitter.svg" alt="Twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://#">
+                            <img src="imgs/soc_icons/dribbble.svg" alt="Dribbble">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://#">
+                            <img src="imgs/soc_icons/instagram.svg" alt="Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://#">
+                            <img src="imgs/soc_icons/github.svg" alt="Github">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://#">
+                            <img src="imgs/soc_icons/youtube.svg" alt="Youtube">
+                        </a>
+                    </li>
+
                 </ul>
             </footer>
         </nav>
     </header>
-<div class="wrapper">
-    <!-- hero -->
-    <section class="hero">
-        <h2 class="section__header">1 . HI MY NAME IS ABACHOUCH YOUSSOUF</h2>
-        <h1>FRONT END WEB DEVELOPER &AMP; DESIGNER</h1>
-    </section>
+    <div class="wrapper">
+        <!-- hero -->
+        <section class="hero">
+            <h2 class="section__header">1 . HI MY NAME IS ABACHOUCH YOUSSOUF</h2>
+            <h1>FRONT END WEB DEVELOPER &AMP; DESIGNER</h1>
+        </section>
+    </div>
     <!-- about -->
     <section class="about">
-        <h2 class="section__header">2 . KNOW ME BETTER</h2>
+        <div class="wrapper">
+            <h2 class="section__header">2 . KNOW ME BETTER</h2>
+        </div>
         <div class="about__content">
             <div class="about__image-wraper">
                 <img src="imgs/img-minimal-1.jpg" alt="minimal image">
             </div>
-            <p class="about__text">Hello, my name is Youssouf Abachouch and I’m a Front End Wed developer. I’ve a passion for the beauty, whether simple or extravagant. I also love UI.UX design and typography. I was born in Agadir, but now I live in Fes. So, I’m Morrocan but i like to call my self a citizens of the world, it helps me to learn more from other cultures , that why i choose to work as a freelancer, it makes me befriend people arond the world . I gratueded @ Fes’s Technology institu where I discovered my passion for problem solving declined to Web Development. I am currently working as afreelancer . And please, don't forget ... may the force be with you!</p>
+            <p class="about__text">Hello, my name is Youssouf Abachouch and I’m a Front End Wed developer. I’ve a passion for the beauty, whether
+                simple or extravagant. I also love UI.UX design and typography. I was born in Agadir, but now I live in Fes.
+                So, I’m Morrocan but i like to call my self a citizens of the world, it helps me to learn more from other
+                cultures , that why i choose to work as a freelancer, it makes me befriend people arond the world . I gratueded
+                @ Fes’s Technology institu where I discovered my passion for problem solving declined to Web Development.
+                I am currently working as afreelancer . And please, don't forget ... may the force be with you!</p>
         </div>
     </section>
-</div>
+    <div class="wrapper">
+        <section class="recent-posts">
+            <h2 class="section__header">3 . READ MY POSTS</h2>
+            <div class="recent-posts-wrapper">
+                <article role="article" class="card recent-post">
+                    <div class="rp-thumb-wrap">
+                        <img src="imgs/img-minimal-2.jpg" alt="img">
+                    </div>
+                    <footer>
+                        <h3>HELOO</h3>
+                        <h2>SOMME TITLE HERE</h2>
+                    </footer>
+                </article>
+                <article role="article" class="card recent-post">
+                    <div class="rp-thumb-wrap">
+                        <img src="imgs/img-minimal-3.jpg" alt="img">
+                    </div>
+                    <footer>
+                        <h3>HELOO</h3>
+                        <h2>SOMME TITLE HERE</h2>
+                    </footer>
+                </article>
+                <article role="article" class="card recent-post">
+                    <div class="rp-thumb-wrap">
+                        <img src="imgs/img-minimal-4.jpg" alt="img">
+                    </div>
+                    <footer>
+                        <h3>HELOO</h3>
+                        <h2>SOMME TITLE HERE</h2>
+                    </footer>
+                </article>
+            </div>
+        </section>
+    </div>
+
 
 </body>
 <script>
     document.getElementById('toggle').addEventListener('click', function () {
         const menu = document.getElementById('menu');
-        console.log(menu.style.right) ;
+        console.log(menu.style.right);
         menu.style.right = (menu.style.right == '0px') ? '-380px' : '0px';
         document.getElementById('toggle').classList.toggle('close');
     });
 
 
 
-var myNav = document.getElementById('mynav');
-window.onscroll = function () { 
-    "use strict";
-    if (document.body.scrollTop >= 200 ) {
-        document.getElementById('navbar').classList.add('bg');
-    } 
-    else {
-        document.getElementById('navbar').classList.remove('bg');
-    }
-};
-
-
+    var myNav = document.getElementById('mynav');
+    window.onscroll = function () {
+        "use strict";
+        if (document.body.scrollTop >= 200) {
+            document.getElementById('navbar').classList.add('bg');
+        } else {
+            document.getElementById('navbar').classList.remove('bg');
+        }
+    };
 </script>
 
 </html>
