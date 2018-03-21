@@ -36,6 +36,12 @@ $(document).ready(function () {
         });
 
 
+    // Filter Carosell
+    const caro = document.getElementById('bFilterCarosel');
+    caro.addEventListener('mousedown', function (e) {
+        console.log('event ' +e) ;
+      });
+
 
 });
 

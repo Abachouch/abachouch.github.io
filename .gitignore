@@ -1,3 +1,5 @@
 #sass files
 sass/
 .sass-cache/
+blog/
+test.html
