@@ -1,0 +1,47 @@
+// Blog post on home
+.bpost {
+    margin-top: 40px;
+    &_image {
+        object-fit: cover;
+        width: 100%;
+        opacity: 1;
+        height: 450px;
+        filter: grayscale(.8);
+        transition: all 1s ease-out;
+    }
+    &:hover {
+        .bpost_image {
+            opacity: 1;
+            filter: none;
+        }
+        .bpost_title {
+            font-family: $font-serif;
+            font-weight: 400;
+            
+            color: $color-white ;
+        }
+    }
+    &_title {
+        font-family: $font-serif;
+        font-weight: 400;
+        margin: 10px 10px 30px;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        color: $color-gray-2;
+        text-transform: capitalize;
+        line-height: 160%;
+        letter-spacing: 0;
+        text-align: center;
+        z-index: 99;
+        transition: all 500ms ease-out;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bpost_image {
+        height: 300px;
+    }
+    .bpost:nth-child(3) {
+        display: none;
+    }
+}

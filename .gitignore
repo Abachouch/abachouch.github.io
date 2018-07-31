@@ -1,5 +1,2 @@
 #sass files
-sass/
-.sass-cache/
-blog/
-test.html
+node_modules/

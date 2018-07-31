@@ -1,0 +1,35 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    @include media-breakpoint-down(sm) {
+        min-height: initial;
+        padding: 60px 0;
+    }
+    &_header {
+        font-size: 9vw;
+        line-height: 1;
+        color: $color-white;
+        font-weight: 700;
+        padding: 100px 0;
+        font-family: $font-sans;
+    }
+    &_social {
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        right: 30px;
+        bottom: 100px;
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+        li {
+            padding: 5px;
+        }
+    }
+    .icon-social {
+        fill: $color-white;
+        &:hover {
+            fill: $color-gold;
+        }
+    }
+}

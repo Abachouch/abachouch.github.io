@@ -1,0 +1,78 @@
+.featured {
+    margin: 40px $card-spacer-x ;
+    
+    height: 500px;
+    position: relative;
+    @include media-breakpoint-down(sm) {
+        margin: 100px 0;
+        height: 350px ;
+    }
+    @include media-breakpoint-only(xs) {
+        margin: 100px -15px ;
+       
+    }
+
+    &_image {    
+        width: 100%;
+        height: 100%;
+        transition: transform 500ms ease-in-out;
+       transition: background-position 100ms ease ;
+        background-color: rgb(211, 211, 211);
+        background-clip: border-box ;
+        background-origin: border-box ;
+        background-position: center ;
+    }
+    &_body {
+        background-color: $color-white;
+        box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.315) ;
+        position: absolute;
+        top: 25%;
+        
+        max-width: 450px;   
+        
+        padding: 50px 20px ;
+        left: 30px;    
+        right: 30px;
+        margin: 0 auto ;
+        text-align: center;
+        
+        &_label {
+            font-family: $font-sans;
+            font-weight: 700;
+            font-size: .8rem;
+            color: $color-gray-3;
+            margin-bottom: 20px ;
+            letter-spacing: .05rem  ;
+        }
+        &_title {
+            font-family: $font-serif;
+            font-weight: 400;
+            //font-size: 1.8rem;
+            font-size: calc(16px + (32 - 16) * ((100vw - 320px) / (1600 - 320)));
+            color: $color-dark;
+            padding: 10px 0px;
+        }
+        &_link {
+            color: $color-gold;
+            font-family: $font-sans;
+            font-weight: 700;
+            font-size: .9rem;
+            &::after{
+                transition: all 200ms ease ;
+                content: "⇾" ;
+                opacity: 0;
+            }
+            &:hover{
+                color: $color-gold ;
+                &::after{
+
+                    margin-left: 15px ;
+                    opacity: 1;
+                }
+            }
+        }
+        
+    }
+}
+
+

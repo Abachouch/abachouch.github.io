@@ -1,0 +1,35 @@
+
+.article{
+    color: $color-white ;
+    max-width: 900px ;  
+    .article-title{
+
+font-size: calc(28px + (58 - 28) * ((100vw - 300px) / (1600 - 300)));
+/*
+font-size: calc([minimum size] + ([maximum size] - [minimum size]) 
+* ((100vw - [minimum viewport width]) / 
+([maximum viewport width] - [minimum viewport width])));
+*/
+    }
+    p{
+        
+        font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1600 - 300)));
+        line-height: 150% ;
+        margin :40px 0 ;
+    }
+    img{
+        padding: 2rem ;
+        max-width: 700px ;
+        display: block;
+        margin: 0 auto;
+    }
+    h2{
+        font-size: calc(22px + (38 - 16) * ((100vw - 300px) / (1600 - 300)));
+        font-family: $font-sans ;
+        font-weight: 700 ;
+        
+    }
+}
+
+
+// @include media-breakpoint-down(sm) {}
