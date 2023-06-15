@@ -1,0 +1,126 @@
+
+.nav{
+    
+    position: fixed; top: 0;
+    right: 0;left: 0;
+    padding: 1rem;
+    
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.099);
+    color: rgb(0, 0, 0);
+    
+    @include sm {
+        padding: .5rem 2rem;
+      }
+    a{
+        color: currentColor;
+    }
+    ul{
+        list-style: none;
+        margin: 2rem 0 0 0;
+    
+    }
+    li{
+        font-family: Cormorant, Times, serif ;
+    }
+    h3{
+        color: rgb(255, 255, 255);
+        font-family: Inter;
+        font-weight: 700;
+    }
+    &__toggle{
+    
+
+        background-color: transparent;
+    color: currentColor;
+    border: none;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    column-gap: 2rem;
+    position: relative;
+    padding: 0;
+        &__icon {
+
+            &:before,
+            &:after {
+                position: absolute;
+                left: 15px;
+                content: ' ';
+                height: 16px;
+                width: 2px;
+                background-color: currentColor ; 
+                transition: transform 200ms ease;
+            }
+    
+            &:before {
+                transform: rotate(0);
+            }
+    
+            &:after {
+                transform: rotate(0);
+            }
+        }
+    }
+    &__content{
+        display: none;
+        overflow: auto;
+    }
+    &.open{
+        background-color: blueviolet;
+        position: fixed;
+        bottom: 0;
+        display: grid;
+        grid-template-rows: min-content 1fr;
+        color: rgb(255, 255, 255);
+        & >.nav__content{
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+
+        .nav__toggle {
+            &__icon {
+                &:before {
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+       
+    }
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+   
+    
+    &__links{
+    }
+    &__link{
+        font-size: 2rem;
+        @include responsive-font(5vw, 35px, 64px, 50px);
+    }
+    &__tags{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        &-wraper{
+            flex-grow: 1;
+        }
+    }
+    &__tag{
+        font-size: 1.2rem;
+    }
+    &__socials{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1rem;
+    }
+    
+}

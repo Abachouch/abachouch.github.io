@@ -1,0 +1,48 @@
+.home__about{
+    width: 100%;
+    max-width: $maxContainerWidth;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    display :flex ;
+    flex-direction: column;
+    gap: 2rem;
+    color: #0D0E25;
+    font-family: Inter ;
+    @include sm{
+        display :grid ;
+        padding: 0 2rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+    }
+    &__heading{
+        margin:  0;
+        line-height: 130%;
+        font-size: 2.5rem;
+        font-weight: 900;
+        @include sm{
+            font-size: 3rem;
+        }
+    }
+    &__description{
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 130%;
+        @include md{
+            font-size: 1.9rem;
+        }
+    }
+    &__portrait{
+        display: block;
+        object-fit: cover;
+        max-width: 400px;
+        height: 100%;
+        margin: auto;
+
+        &-wraper{
+            overflow: hidden;
+            border-radius: 6px;
+            grid-row: 1 / span 2;
+            grid-column: 2;
+        }
+    }
+}

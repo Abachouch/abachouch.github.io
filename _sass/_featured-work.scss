@@ -1,0 +1,52 @@
+.featured-works {
+
+    padding: 1rem;
+    width: 100%;
+    max-width: $maxContainerWidth;
+    margin: 0 auto;
+
+    &__heading {
+        font-family: Cormorant;
+        margin-top: 3rem;
+        font-size: 4rem;
+        font-weight: 600;
+        color: rgb(60, 58, 65);
+    }
+    &__more{
+        border: 1px solid rgb(37, 37, 37);
+        color: black;
+        padding: 0.5rem 1rem;
+        display: block;
+        width: fit-content;
+        margin: 0 auto 2rem;
+    }
+}
+
+.featured-work {
+    background-color: #F8FBFF;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: Inter;
+    margin:3rem 0;
+    @include sm {
+        padding: 2rem;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+        box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.165);
+    }
+    &__title{
+       
+        font-weight: 700;
+        font-size: 1rem;
+        margin: 0;
+    }
+    &____description{
+
+    }
+
+}

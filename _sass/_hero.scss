@@ -1,0 +1,33 @@
+.home__hero {
+    background-color: rgb(238, 241, 247);
+    padding: 3rem 1rem;
+    height: 100%;
+    min-height: 100vh;
+
+    @include sm {
+        padding: 5rem 2rem;
+    }
+
+    &__intro {
+        font-size: 1rem;
+        font-style: italic;
+    }
+
+    &__heading {
+        margin-top: 1rem;
+        font-family: Cormorant;
+
+        &__name {
+
+            font-variation-settings: "wght" 800;
+            line-height: 120%;
+            @include responsive-font(10vw, 48px, 144px, 50px);
+        }
+
+        &__title {
+            display: block;
+            font-variation-settings: "wght" 375;
+            @include responsive-font(5vw, 48px, 64px, 50px);
+        }
+    }
+}

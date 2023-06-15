@@ -1,0 +1,29 @@
+
+@font-face {
+    font-family: "Cormorant";
+    src: url('../assets/fonts/Cormorant-VariableFont_wght.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: "Inter";
+    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+  }
+ :root{
+    --text-color : #0D0E25 ;
+  }
+
+  body{
+    font-family: Inter, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--text-color)
+  }
+
+@import './variables';
+@import './mixins';
+@import './nav';
+@import './hero';
+@import './featured-work';
+@import './home-about';
+@import './skills';
+@import './featured-snipets';
+@import './cta';
+@import './footer';
