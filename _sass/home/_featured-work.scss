@@ -8,10 +8,13 @@
     &__heading {
         font-family: Cormorant;
         margin-top: 3rem;
-        font-size: 4rem;
+        font-size: 2rem;
         font-weight: 600;
         color: rgb(60, 58, 65);
+
+        @include responsive-font(5vw, 32px, 52px, 50px);
     }
+
     &__more{
         border: 1px solid rgb(37, 37, 37);
         color: black;
@@ -23,16 +26,37 @@
 }
 
 .featured-work {
+    &-wraper {
+        display: block;
+     color: unset;
+        &:hover{
+            text-decoration: none;
+        }
+        &:visited{
+            color: currentColor;
+        }
+    }
     background-color: #F8FBFF;
     padding: 1rem;
     border-radius: 4px;
     font-family: Inter;
     margin:3rem 0;
+   
     @include sm {
         padding: 2rem;
     }
+    &.inview{
+        
+        &> .featured-work__image{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
 
-    &__image {
+    &__image { 
+        opacity: 0;
+        transform: translateY(100px);
+        transition: transform 400ms ease-in , opacity 300ms ease-in;
         display: block;
         width: 100%;
         margin-bottom: 1rem;
@@ -43,10 +67,11 @@
        
         font-weight: 700;
         font-size: 1rem;
-        margin: 0;
+        margin: 2rem 0 0 0;
+        color: var(--heading-color);
     }
-    &____description{
-
+    &__description{
+        color: var(--subtext-color);
     }
 
 }
