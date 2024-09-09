@@ -1,35 +1,54 @@
-.home__hero {
+
+.home-hero-wraper {
     background-color: rgb(238, 241, 247);
-    padding: 6rem 1rem;
-    height: 100%;
-    min-height: 100vh;
+}
+
+.home-hero {
+    padding-block: 6rem 4rem;
+    width: 100%;
     display: grid;
     align-items: center;
+    grid-template-rows: auto auto auto 1fr;
+    gap: 1rem;
 
-    @include sm {
-        padding: 8rem 2rem;
+    @include md {
+        height: 100%;
+        min-height: 100vh;
     }
 
-    &__intro {
-        font-size: 1rem;
-        font-style: italic;
-    }
+
+
+    
 
     &__heading {
         margin-top: 1rem;
         font-family: Cormorant;
+        font-size: 3rem;
+        @include responsive-font(10vw, 48px, 72px, 50px);
+        font-variation-settings: "wght" 800;
+        line-height: 120%;
+       
+    }
+    &__lead{
+        max-width: 450px;
+        font-weight: 600;
+        line-height: 150%;
+    }
 
-        &__name {
+    &__ctas{
+        display: flex;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
 
-            font-variation-settings: "wght" 800;
-            line-height: 120%;
-            @include responsive-font(10vw, 48px, 144px, 50px);
-        }
-
-        &__title {
+    &__supporting{
+        max-width: 400px;
+        align-self: flex-end;
+        justify-self: end;
+        display: none;
+        @include md {
             display: block;
-            font-variation-settings: "wght" 375;
-            @include responsive-font(5vw, 48px, 64px, 50px);
         }
+    
     }
 }

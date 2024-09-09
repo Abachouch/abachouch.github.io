@@ -1,0 +1,79 @@
+.home-services {
+    background-color: #f5f508;
+    margin-block: 4rem;
+    color: black;
+    border-radius: 4px;
+    padding: 1rem;
+
+    @include sm {
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+
+    @include lg {
+        border-radius: 1rem;
+        padding: 3rem;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: space-between;
+
+        @include md {
+            flex-direction: row;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__lead {
+        max-width: 400px;
+
+        @include md {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__heading {
+        font-size: 2rem;
+        font-weight: 700;
+
+        @include sm {
+            font-size: 3.5rem;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 1rem;
+
+        @include sm {
+
+            gap: 3rem;
+        }
+
+        @include md {
+            flex-direction: row;
+        }
+
+    }
+
+}
+
+
+.home-service {
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    &__description {
+        font-weight: 600;
+    }
+}

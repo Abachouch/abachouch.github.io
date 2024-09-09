@@ -1,77 +1,83 @@
 .featured-works {
+    margin-block: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    // position: sticky;
+    // top: 0;
 
-    padding: 1rem;
-    width: 100%;
-    max-width: $maxContainerWidth;
-    margin: 0 auto;
-
-    &__heading {
-        font-family: Cormorant;
-        margin-top: 3rem;
-        font-size: 2rem;
-        font-weight: 600;
-        color: rgb(60, 58, 65);
-
-        @include responsive-font(5vw, 32px, 52px, 50px);
+    @include lg {
+        grid-template-columns: 1fr 2fr;
     }
 
-    &__more{
-        border: 1px solid rgb(37, 37, 37);
-        color: black;
-        padding: 0.5rem 1rem;
-        display: block;
-        width: fit-content;
-        margin: 0 auto 2rem;
+    &__header {
+      
+        align-self: start;
+        top: 4rem;
+        @include lg {
+            position: sticky;
+        }
+    }
+
+    &__heading {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        line-height: 140%;
+    }
+
+    &__lead {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    &__list {
+        display: flex;
+        gap: 3rem;
+        flex-direction: column;
+
+        @include lg {
+            gap: 3rem;
+        }
     }
 }
 
 .featured-work {
-    &-wraper {
-        display: block;
-     color: unset;
-        &:hover{
-            text-decoration: none;
-        }
-        &:visited{
-            color: currentColor;
-        }
+    display: grid;
+    gap: 1rem;
+    
+
+    @include md {
+        grid-template-columns: 1fr 1fr;
     }
-    background-color: #F8FBFF;
-    padding: 1rem;
-    border-radius: 4px;
-    font-family: Inter;
-    margin:3rem 0;
-   
-    @include sm {
-        padding: 2rem;
-    }
-    &.inview{
-        
-        &> .featured-work__image{
-            opacity: 1;
-            transform: translateX(0);
+
+    &__header {
+        @include md {
+            order: -1;
         }
     }
 
-    &__image { 
-        opacity: 0;
-        transform: translateY(100px);
-        transition: transform 400ms ease-in , opacity 300ms ease-in;
-        display: block;
-        width: 100%;
-        margin-bottom: 1rem;
-        border-radius: 4px;
-        box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.165);
-    }
-    &__title{
-       
-        font-weight: 700;
-        font-size: 1rem;
-        margin: 2rem 0 0 0;
+    &__title {
         color: var(--heading-color);
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0.5rem 0;
     }
-    &__description{
+
+    &__role {
         color: var(--subtext-color);
     }
 
+    &__description {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    &__link {
+        display: block;
+        margin-block: 0.5rem;
+        color: var(--link-color);
+    }
 }

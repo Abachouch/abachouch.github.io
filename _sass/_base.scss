@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+}
+
+a{
+    color: currentColor;
+    text-decoration: none;
+}
+img , video , svg{
+    width: 100%;
+    height: auto;
+}
+h1, h2 ,h3 ,h4 , h5 , h6{
+    margin: 0 ;
+}
+ul,ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

@@ -1,8 +1,5 @@
 .featured-snipets{
-    width: 100%;
-    max-width: $maxContainerWidth;
-    margin : 0 auto;
-    padding: 2rem 1rem;
+    margin-block: 3rem;
     @include sm{
         padding: 4rem 2rem;
     }

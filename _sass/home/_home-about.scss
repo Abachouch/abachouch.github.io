@@ -1,15 +1,14 @@
-.home__about{
+.home-about{
     width: 100%;
     max-width: $maxContainerWidth;
     margin: 3rem auto;
-    padding: 0 1rem;
     display :flex ;
     flex-direction: column;
     gap: 2rem;
     color: #0D0E25;
     font-family: Inter ;
     &.inview{
-        .home__about{
+        .home-about{
             &__heading{
                opacity: 1;
                 transform: translateX(0);
@@ -29,7 +28,6 @@
     }
     @include sm{
         display :grid ;
-        padding: 0 2rem;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto 1fr;
     }
@@ -57,6 +55,13 @@ opacity: 0;
             font-size: 1.9rem;
         }
     }
+    &__email{
+        margin-top: 2rem;
+    display: block;
+    color: var(--subtext-color);
+    font-weight: 400;
+    font-size: 1.3rem;
+    }
     &__portrait{
         display: block;
         object-fit: cover;
@@ -66,6 +71,7 @@ opacity: 0;
         margin: auto;
        transform: translateX(500px);
         transition: transform 200ms ease;
+        border-radius: 6px;
         &-wraper{
             overflow: hidden;
             border-radius: 6px;

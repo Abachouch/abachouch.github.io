@@ -1,70 +1,81 @@
+.footer {
+    background-color: azure;
+    
 
-.footer { 
-     background-color: azure;
-    margin-top: 6rem;
-    &-wraper{
+    a{
+        font-weight: 600;
+        opacity: 0.7;
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+    &-wraper {
         display: grid;
         gap: 4rem 2rem;
         grid-template-columns: 1fr;
-        width: 100%;
-        max-width: $maxContainerWidth;
-        margin: 0 auto;
-        padding: 2rem 1rem ;
+        padding: 2rem 1rem;
+
         @include sm {
             padding: 2rem;
             display: grid;
             grid-template-columns: 1fr 3fr;
         }
     }
-    ul{
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    a{
+
+    a {
         color: black;
     }
-    &__brand{
+
+    &__brand {
         display: block;
         text-align: center;
         font-size: 1.1rem;
         font-weight: 700;
-        strong{
+
+        strong {
             font-weight: 900;
         }
-        @include sm{
-            text-align :left ;
+
+        @include sm {
+            text-align: left;
         }
     }
-    &__contact{
+
+    &__contact {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        &__socials{
+
+        &__socials {
             display: flex;
-                flex-direction: row;
+            flex-direction: row;
             column-gap: 1rem;
             margin-block: 2rem;
+           
         }
 
-        &__email{
+        &__email {
             width: fit-content;
-            font-family:Cormorant;
+            font-family: Cormorant;
             line-height: 1.2em;
+
             @include sm {
                 font-size: 1.5rem;
-                
-                
+
+
             }
-            &__link{
+
+            &__link {
                 border-bottom: 4px solid rgb(255, 123, 0);
                 display: block;
                 padding-bottom: .3em;
-                font-family: Cormorant ;
+                font-family: Cormorant;
             }
         }
     }
-    &__nav{
+
+    &__nav {
         display: flex;
         flex-direction: column;
         align-self: flex-start;
@@ -73,12 +84,8 @@
         font-weight: 400;
         font-size: 1.5rem;
         font-family: Cormorant;
-        >li>a{
-            opacity: 0.7;
-            &:hover{
-                opacity: 1;
-            }
-        }
+
+
         @include md {
             justify-self: center;
             flex-direction: row;
@@ -86,13 +93,14 @@
             flex-wrap: wrap;
         }
     }
-    &__copy{
+
+    &__copy {
         text-align: center;
         padding-top: 3rem;
-        
-        
+
+
         @include sm {
-            
+
             grid-column-start: 1;
             grid-column-end: 3;
         }

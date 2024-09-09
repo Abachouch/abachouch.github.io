@@ -1,0 +1,15 @@
+.btn{
+    padding: .75rem 2rem;
+    border-radius: 4px;
+    color: var(--text-color);
+    transition: all 500ms ease;
+    width: fit-content;
+    &:hover{
+        background-color: white;
+        color: var(--text-color);
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.10);
+    }
+}
+.btn--cta{
+    background-color: white;
+}
