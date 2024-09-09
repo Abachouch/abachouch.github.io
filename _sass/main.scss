@@ -13,6 +13,9 @@
     font-family: Inter, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: var(--text-color)
   }
+  body.nav-open{
+    overflow: hidden ;
+  }
 
 @import './variables';
 @import './mixins';
