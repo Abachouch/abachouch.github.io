@@ -4,6 +4,7 @@
     color: var(--text-color);
     transition: all 500ms ease;
     width: fit-content;
+    border: 1px solid var(--text-color) ;
     &:hover{
         background-color: white;
         color: var(--text-color);
@@ -12,4 +13,5 @@
 }
 .btn--cta{
     background-color: white;
+    border: 1px solid transparent ;
 }

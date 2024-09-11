@@ -19,10 +19,10 @@
             </button>
 
         </div>
-    </div>
+    
 
 
-    <div class="container">
+    
         <nav class="nav__content">
             <ul class="nav__links">
                 <li class="nav__link"><a href="/">Home</a></li>
@@ -55,7 +55,7 @@
                 nav.classList.toggle('open');
                 document.body.classList.toggle('nav-open');
             }
-            const navLinks = document.querySelectorAll('.nav__link');
+            const navLinks = document.querySelectorAll('.nav__link>a');
             navLinks.forEach(e => {
                 e.addEventListener('click'  , ()=>{
                     nav.classList.remove('open');
