@@ -1,8 +1,14 @@
 
 .home-hero-wraper {
     background-color: rgb(231, 235, 243);
-    background-image: url('/imgs/grain\ background\ black.png');
-    background-repeat: repeat;
+    background-image: url('/imgs/sphere3.gif');
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-blend-mode: screen;
+    @include sm{
+        background-blend-mode: luminosity;
+        background-position: center right;
+    }
 }
 
 .home-hero {

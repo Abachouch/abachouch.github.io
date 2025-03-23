@@ -9,8 +9,10 @@
     backdrop-filter: blur(6px);
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.099);
     color: rgb(0, 0, 0);
-    transition: all 300ms ease-in-out;
-
+    background-position: center;
+    background-image: none;
+    transition: all 200ms ease, background-image 0s ease 1s; /* Separate transitions */
+    
     @include sm {}
 
     ul {
@@ -27,7 +29,6 @@
         font-family: Inter;
         font-weight: 700;
     }
-
 
     &__me{
         display: grid;
@@ -143,10 +144,18 @@
         height: 0;
         overflow: auto;
         min-height: 100%;
+        
     }
+    
 
     &.open {
-        background-color: blueviolet;
+        background-image: url('/imgs/1.gif');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-blend-mode: lighten;
+        
+        background-color: #362447;
+
         height: 100dvh;
         grid-template-rows: min-content 1fr;
         color: rgb(255, 255, 255);
@@ -157,6 +166,7 @@
             height: 700px;
             flex-direction: column;
             gap: 3rem;
+            justify-content: space-between;
         }
         
 
