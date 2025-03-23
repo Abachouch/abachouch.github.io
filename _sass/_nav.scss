@@ -161,9 +161,15 @@
         color: rgb(255, 255, 255);
         --heading-color : white ;
 
+        .container{
+            display: grid;
+            grid-template-rows: min-content auto;
+            height: 100%;
+        }
+
         & .nav__content {
             display: flex;
-            height: 700px;
+            
             flex-direction: column;
             gap: 3rem;
             justify-content: space-between;
