@@ -1,5 +1,7 @@
 .home-services {
-    background-color: #f5f508;
+    background-color: #d1d124;
+    background-image: url('/imgs/grain\ background\ black.png');
+    background-repeat: repeat;
     margin-block: 4rem;
     color: black;
     border-radius: 4px;
@@ -71,9 +73,11 @@
     &__title {
         font-size: 1.5rem;
         font-weight: 700;
+        line-height: 130%;
     }
 
     &__description {
-        font-weight: 600;
+        font-weight: 500;
+        line-height: 150%;
     }
 }

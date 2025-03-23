@@ -1,6 +1,8 @@
 
 .home-hero-wraper {
-    background-color: rgb(238, 241, 247);
+    background-color: rgb(231, 235, 243);
+    background-image: url('/imgs/grain\ background\ black.png');
+    background-repeat: repeat;
 }
 
 .home-hero {
@@ -15,15 +17,27 @@
         height: 100%;
         height: 100dvh;
         max-height: 980px;
+        padding-block: 10rem 4rem;
     }
 
     &__heading {
+        &-wraper{
+            overflow: hidden;
+        }
         margin-top: 1rem;
         font-family: Cormorant;
         font-size: 3rem;
         @include responsive-font(10vw, 48px, 72px, 50px);
         font-variation-settings: "wght" 800;
         line-height: 120%;
+        &__line-1{
+            display: block;
+            animation: popup-in 1s ease 200ms backwards;
+        }
+        &__line-2{
+            display: block;
+            animation: popup-in 1s ease 300ms backwards;
+        }
     }
     &__lead{
         max-width: 450px;
@@ -52,5 +66,17 @@
             display: block;
         }
     
+    }
+}
+
+@keyframes popup-in {
+    from {
+        opacity: 0;
+        transform: translateY(250px);
+    }
+    to{
+         opacity: 1;
+        transform: translateY(0);
+
     }
 }
