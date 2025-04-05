@@ -1,49 +1,44 @@
 .featured-projects {
-    margin-block: 6rem;
-    &__heading {
-        font-family: Cormorant;
-        margin-top: 3rem;
-        font-size: 2rem;
-        font-weight: 600;
-        color: rgb(60, 58, 65);
-        @include responsive-font(5vw, 32px, 52px, 50px);
-        margin-bottom: 3rem;
+  padding-block: 6rem;
+  &__heading {
+    font-family: var(--font-heading);
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    @include responsive-font(5vw, 32px, 52px, 50px);
+    margin-bottom: 3rem;
+  }
+  &__list {
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 4rem;
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
     }
-    &__list{
-        display: grid;
-        column-gap: 2rem;
-        row-gap: 4rem;
-        @include sm {
-            grid-template-columns: repeat(2 , 1fr);
-            
-        }
 
-        @include lg {
-            grid-template-columns: repeat(3 , 1fr);
-            
-        }
-     
-        
+    @include lg {
+      grid-template-columns: repeat(3, 1fr);
     }
+  }
 }
 
 .featured-project {
-  
-    &__thumbnail{
-        
-        aspect-ratio: 16 / 9;
-        object-fit: cover;
-        object-position: bottom;
-    }
-    &__title{
-        font-size: 0.9rem;
-        margin-block : 0.5rem ;
-    }
-    &__links{
-        color: var(--link-color);
-        display: flex;
-        gap: 1rem;
-        font-size: .8rem;
-    }
-
+  &__thumbnail {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: bottom;
+  }
+  &__title {
+    font-size: 0.9rem;
+    margin-block: 0.5rem;
+  }
+  &__links {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+  }
+  &__link {
+    color: var(--muted-text-color);
+  }
 }

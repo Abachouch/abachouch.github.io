@@ -1,40 +1,37 @@
 <header class="nav" id="nav">
-    <div class="container">
-        <div class="nav__header">
-
-            <div class="nav__me">
-                <div class="nav__me__avatar-wraper">
-                    <img class="nav__me__avatar" src="/imgs/abachouch_avatar_bw.png" alt="Abachouch Youssouf">
-                </div>
-                
-                    <span class="nav__me__name">Abachouch Youssouf</span>
-                    <span class="nav__me__prof">Full-stack web developer</span>
-          
-            </div>
-
-
-            <button id="navToggle" class="nav__toggle" onclick="toggleMenu()">
-                <span class="nav__toggle__icon">
-                    <span class="nav__toggle__line"></span>
-                    <span class="nav__toggle__line"></span>
-                </span>
-                <span class="nav__toggle__label">Menu</span>
-            </button>
-
+  <div class="container">
+    <div class="nav__header">
+      <div class="nav__me">
+        <div class="nav__me__avatar-wraper">
+          <img
+            class="nav__me__avatar"
+            src="/assets/images/abachouch_avatar_bw.png"
+            alt="Abachouch Youssouf"
+          />
         </div>
-    
 
+        <span class="nav__me__name">Abachouch Youssouf</span>
+        <span class="nav__me__prof">Full-stack web developer</span>
+      </div>
 
-    
-        <nav class="nav__content">
-            <ul class="nav__links">
-                <li class="nav__link"><a href="/">Home</a></li>
-                <li class="nav__link"><a href="/#about">About</a></li>
-                <li class="nav__link"><a href="/#work">Work</a></li>
-                <li class="nav__link"><a href="/#sideProjects">Side projects</a></li>
-            </ul>
+      <button id="navToggle" class="nav__toggle" onclick="toggleMenu()">
+        <span class="nav__toggle__icon">
+          <span class="nav__toggle__line"></span>
+          <span class="nav__toggle__line"></span>
+        </span>
+        <span class="nav__toggle__label">Menu</span>
+      </button>
+    </div>
 
-            <!-- <div class="nav__tags-wraper">
+    <nav class="nav__content">
+      <ul class="nav__links">
+        <li class="nav__link"><a href="/">Home</a></li>
+        <li class="nav__link"><a href="/#about">About</a></li>
+        <li class="nav__link"><a href="/#work">Work</a></li>
+        <li class="nav__link"><a href="/#sideProjects">Side projects</a></li>
+      </ul>
+
+      <!-- <div class="nav__tags-wraper">
                 <h3>Browse Tags</h3>
                 <ul class="nav__tags">
                     <li class="nav__tag"><a href="/">Home</a></li>
@@ -44,28 +41,39 @@
                 </ul>
             </div> -->
 
-            <ul class="nav__socials">
-                <li><a target="_blank" href="https://www.linkedin.com/in/abachouchyoussouf/">LINKEDIN</a></li>
-                <li><a target="_blank" href="https://github.com/Abachouch">GITHUB</a></li>
-                <li><a target="_blank" href="https://www.instagram.com/abachouchyoussouf/">INSTAGRAM</a></li>
-            </ul>
-        </nav>
+      <ul class="nav__socials">
+        <li>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/abachouchyoussouf/"
+            >LINKEDIN</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/Abachouch">GITHUB</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.instagram.com/abachouchyoussouf/"
+            >INSTAGRAM</a
+          >
+        </li>
+      </ul>
+    </nav>
 
-        <script>
-            const nav = document.getElementById('nav');
-            function toggleMenu() {
-                const navToggle = document.getElementById('navToggle');
-                nav.classList.toggle('open');
-                document.body.classList.toggle('nav-open');
-            }
-            const navLinks = document.querySelectorAll('.nav__link>a');
-            navLinks.forEach(e => {
-                e.addEventListener('click'  , ()=>{
-                    nav.classList.remove('open');
-                    document.body.classList.remove('nav-open');
-                })
-            })
-        </script>
-
-    </div>
+    <script>
+      const nav = document.getElementById("nav");
+      function toggleMenu() {
+        const navToggle = document.getElementById("navToggle");
+        nav.classList.toggle("open");
+        document.body.classList.toggle("nav-open");
+      }
+      const navLinks = document.querySelectorAll(".nav__link>a");
+      navLinks.forEach((e) => {
+        e.addEventListener("click", () => {
+          nav.classList.remove("open");
+          document.body.classList.remove("nav-open");
+        });
+      });
+    </script>
+  </div>
 </header>

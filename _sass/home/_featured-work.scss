@@ -1,83 +1,86 @@
 .featured-works {
-    margin-block: 4rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    // position: sticky;
-    // top: 0;
+  padding-block: 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @include sm {
+    margin-top: 100dvh;
+    position: relative;
+    z-index: 2;
+  }
+
+  @include lg {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  &__header {
+    align-self: start;
+    top: 4rem;
+    @include lg {
+      position: sticky;
+    }
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    line-height: 140%;
+  }
+
+  &__lead {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 140%;
+  }
+
+  &__list {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
 
     @include lg {
-        grid-template-columns: 1fr 2fr;
+      gap: 3rem;
     }
-
-    &__header {
-      
-        align-self: start;
-        top: 4rem;
-        @include lg {
-            position: sticky;
-        }
-    }
-
-    &__heading {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-        line-height: 140%;
-    }
-
-    &__lead {
-        font-size: 1rem;
-        font-weight: 500;
-        line-height: 140%;
-    }
-
-    &__list {
-        display: flex;
-        gap: 3rem;
-        flex-direction: column;
-
-        @include lg {
-            gap: 3rem;
-        }
-    }
+  }
 }
 
 .featured-work {
-    display: grid;
-    gap: 1rem;
-    
+  display: grid;
+  gap: 1rem;
 
+  @include md {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__header {
     @include md {
-        grid-template-columns: 1fr 1fr;
+      order: -1;
     }
+  }
 
-    &__header {
-        @include md {
-            order: -1;
-        }
-    }
+  &__title {
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+  }
 
-    &__title {
-        color: var(--heading-color);
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin: 0.5rem 0;
-    }
+  &__role {
+    color: var(--muted-text-color);
+  }
 
-    &__role {
-        color: var(--subtext-color);
-    }
+  &__description {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 140%;
+  }
 
-    &__description {
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 140%;
-    }
-
-    &__link {
-        display: block;
-        margin-block: 0.5rem;
-        color: var(--link-color);
-    }
+  &__link {
+    display: block;
+    margin-block: 0.5rem;
+    color: var(--link-color);
+  }
 }

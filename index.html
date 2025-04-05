@@ -1,0 +1,386 @@
+---
+layout: default
+---
+
+<main class="main-content home-page" role="main">
+  <section class="home-hero-wraper">
+    <div class="container">
+      <div class="home-hero">
+        <div class="home-hero__heading-wraper">
+          <h1 class="home-hero__heading">
+            <span class="home-hero__heading__line-1"
+              >Transforming Ideas into Scalable,
+            </span>
+            <span class="home-hero__heading__line-2">Full-Stack Solutions</span>
+          </h1>
+        </div>
+        <p class="home-hero__lead">
+          I’m Abachouch Youssouf, a Full-Stack Developer with a passion for
+          creating robust, end-to-end web applications. From crafting intuitive
+          frontends to architecting powerful backends, I build digital solutions
+          that drive success.
+        </p>
+        <div class="home-hero__ctas">
+          <a href="mailto:{{ site.email }}" class="btn btn--cta"
+            >Get in Touch</a
+          >
+          <a href="/projects" class="btn">Explore My Projects</a>
+        </div>
+
+        <div class="home-hero__brands">
+          <ul class="home-hero__brands__list">
+            <li class="home-hero__brands__item">
+              <img
+                loading="lazy"
+                src="/assets/images/React-logo-vector-01 1.png"
+                alt="ReactJS"
+              />
+            </li>
+            <li class="home-hero__brands__item">
+              <img
+                loading="lazy"
+                src="/assets/images/Electron-logo-vector-01 1.png"
+                alt="Electron"
+              />
+            </li>
+            <li class="home-hero__brands__item">
+              <img
+                loading="lazy"
+                src="/assets/images/CSS-3-logo-vector-01 1.png"
+                alt="CSS"
+              />
+            </li>
+            <li class="home-hero__brands__item">
+              <img
+                loading="lazy"
+                src="/assets/images/HTML-5-logo-vector-01 1.png"
+                alt="HTML"
+              />
+            </li>
+            <li class="home-hero__brands__item">
+              <img
+                loading="lazy"
+                src="/assets/images/Aws-icon-vector-01 1.png"
+                alt="AWS"
+              />
+            </li>
+            <li class="home-hero__brands__item">
+              <img
+                loading="lazy"
+                src="/assets/images/WordPress-logo-vector-01 1.png"
+                alt="WordPress"
+              />
+            </li>
+            <li class="home-hero__brands__item">
+              <img
+                loading="lazy"
+                src="/assets/images/JavaScript-logo-vector-01 1.png"
+                alt="JavaScript"
+              />
+            </li>
+            <li class="home-hero__brands__item">
+              <img
+                loading="lazy"
+                src="/assets/images/Node-JS-logo-vector-01 1.png"
+                alt="Node.js"
+              />
+            </li>
+            <li class="home-hero__brands__item">
+              <img
+                loading="lazy"
+                src="/assets/images/Sass-logo-vector-01 1.png"
+                alt="Sass"
+              />
+            </li>
+            <li class="home-hero__brands__item">
+              <img
+                loading="lazy"
+                src="/assets/images/Git-wordmark-icon-vector-01 1.png"
+                alt="Git"
+              />
+            </li>
+            <li class="home-hero__brands__item">
+              <img
+                loading="lazy"
+                src="/assets/images/Nextjs-icon-vector-01 1.png"
+                alt="Next.js"
+              />
+            </li>
+          </ul>
+          <script>
+            const homeHeroBrands = document.querySelector(
+              ".home-hero__brands__list"
+            );
+            const clone = homeHeroBrands.cloneNode(true);
+            homeHeroBrands.parentNode.appendChild(clone);
+          </script>
+        </div>
+
+        <p class="home-hero__supporting">
+          With expertise in Next.js, Node.js, AWS, and modern development
+          frameworks, I deliver seamless, scalable applications that enhance
+          user experiences and achieve business goals.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="layer white-wraper">
+    <section class="container featured-works">
+      <header class="featured-works__header">
+        <h2 id="work" class="featured-works__heading">My Recent <br />Work</h2>
+        <p class="featured-works__lead">
+          Here are some of my latest projects, where I’ve applied my skills to
+          create practical and effective solutions. Each one reflects my
+          dedication to delivering quality results.
+        </p>
+      </header>
+
+      <div class="featured-works__list">
+        {% for case in site.works %}
+        <article class="featured-work">
+          <img
+            loading="lazy"
+            class="featured-work__thumnail"
+            src="{{ case.thumbnail }}"
+            alt=" {{ case.title }} mockup"
+          />
+          <header class="featured-work__header">
+            <h3 class="featured-work__title">{{ case.title }}</h3>
+            <span class="featured-work__role">{{ case.role }}</span>
+            <p class="featured-work__description">{{ case.description }}</p>
+          </header>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    <!-- end featured works -->
+
+    <section class="home-services">
+      <div class="home-services__content">
+        <header class="home-services__header">
+          <h2 class="home-services__heading">
+            Delivering Excellence in Every Line of Code
+          </h2>
+          <p class="home-services__lead">
+            I transform ideas into reality through expert web development,
+            seamless API integration, and tailored WordPress solutions. Let’s
+            build something amazing together.
+          </p>
+        </header>
+        <ul class="home-services__list">
+          <li class="home-service">
+            <h3 class="home-service__title">Crafting Modern <br />Websites</h3>
+            <p class="home-service__description">
+              I specialize in building responsive, high-performance websites
+              using cutting-edge technologies like Next.js and React. Whether
+              it's a dynamic web app or a sleek landing page, I ensure your site
+              is fast, secure, and delivers an exceptional user experience.
+            </p>
+          </li>
+          <li class="home-service">
+            <h3 class="home-service__title">
+              Seamless Backend <br />Integration
+            </h3>
+            <p class="home-service__description">
+              I design and implement robust APIs with Node.js and AWS Lambda,
+              enabling efficient communication between your frontend and
+              backend. My services ensure your application is scalable,
+              reliable, and ready to handle real-world demands.
+            </p>
+          </li>
+          <li class="home-service">
+            <h3 class="home-service__title">
+              Tailored WordPress <br />Solutions
+            </h3>
+            <p class="home-service__description">
+              From transforming Figma designs into pixel-perfect themes to
+              developing custom WordPress functionalities, I deliver solutions
+              that are both visually appealing and optimized for performance,
+              accessibility, and SEO.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- end home services -->
+
+    <section class="container featured-projects">
+      <header class="featured-projects__header">
+        <h2 id="projects" class="featured-projects__heading">
+          Here are my side projects, created with passion, to solve problems and
+          discover new technologies.
+        </h2>
+      </header>
+      {%- if site.youtube_username -%}
+      <li>
+        <a
+          href="https://youtube.com/{{ site.youtube_username| cgi_escape | escape }}"
+          ><svg class="svg-icon">
+            <use
+              xlink:href="{{ '/assets/minima-social-icons.svg#youtube' | relative_url }}"
+            ></use>
+          </svg>
+          <span class="username">{{ site.youtube_username| escape }}</span></a
+        >
+      </li>
+      {%- endif -%}
+      <div class="featured-projects__list">
+        {% for project in site.projects %}
+        <div class="featured-project">
+          <img
+            loading="lazy"
+            class="featured-project__thumbnail"
+            src="{{ project.thumbnail }}"
+            alt="file browser app thumbnail"
+          />
+          <h3 class="featured-project__title">{{project.title}}</h3>
+          <div class="featured-project__links">
+            {%- if project.githubLink -%}
+            <a
+              aria-role="Project github reposotory"
+              itle="github link"
+              href="{{ project.githubLink }}"
+              target="_blank"
+              class="featured-project__link featured-project__github"
+              >View in github</a
+            >
+            {%- endif -%}
+            <span class="link-separator">|</span>
+            {%- if project.demoLink -%}
+            <a
+              aria-role="Project demo link"
+              title="Project demo link"
+              href="{{ project.demoLink }}"
+              target="_blank"
+              class="featured-project__link"
+              >Demo</a
+            >
+            {%- endif -%} {%- if project.downloadLink -%}
+            <a
+              aria-role="Project download link"
+              title="Project download link"
+              href="{{ project.downloadLink| relative_url}}"
+              target="_blank"
+              class="featured-project__link"
+              >Download</a
+            >
+            {%- endif -%}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    <!-- end featured projects -->
+  </div>
+  <div class="layer dark-wraper">
+    <section class="container home-about">
+      <h2 class="home-about__heading">
+        i love creating things with web technology
+      </h2>
+      <p class="home-about__description">
+        I’m a web developer ( and occasionally designer ) based in Agadir,
+        Morocco, i have experience in building applications that are scalable
+        and efficient with an exceptional, pixel-perfect user experiences.
+        <span class="home-about__email">{{ site.email }} </span>
+      </p>
+      <img
+        loading="lazy"
+        src="/assets/images/abachouch_portrait_bw.webp"
+        alt=""
+        class="home-about__portrait"
+      />
+    </section>
+    <!-- end About -->
+
+    <div class="home__cube">
+      <div class="home__cube-wraper">
+        <div class="cube">
+          <div style="--x: -1; --y: 0">
+            <span style="--i: 3"></span>
+            <span style="--i: 2"></span>
+            <span style="--i: 1"></span>
+          </div>
+          <div style="--x: 0; --y: 0">
+            <span style="--i: 3"></span>
+            <span style="--i: 2"></span>
+            <span style="--i: 1"></span>
+          </div>
+          <div style="--x: 1; --y: 0">
+            <span style="--i: 3"></span>
+            <span style="--i: 2"></span>
+            <span style="--i: 1"></span>
+          </div>
+        </div>
+        <div class="cube">
+          <div style="--x: -1; --y: 0">
+            <span style="--i: 3"></span>
+            <span style="--i: 2"></span>
+            <span style="--i: 1"></span>
+          </div>
+          <div style="--x: 0; --y: 0">
+            <span style="--i: 3"></span>
+            <span style="--i: 2"></span>
+            <span style="--i: 1"></span>
+          </div>
+          <div style="--x: 1; --y: 0">
+            <span style="--i: 3"></span>
+            <span style="--i: 2"></span>
+            <span style="--i: 1"></span>
+          </div>
+        </div>
+        <div class="cube">
+          <div style="--x: -1; --y: 0">
+            <span style="--i: 3"></span>
+            <span style="--i: 2"></span>
+            <span style="--i: 1"></span>
+          </div>
+          <div style="--x: 0; --y: 0">
+            <span style="--i: 3"></span>
+            <span style="--i: 2"></span>
+            <span style="--i: 1"></span>
+          </div>
+          <div style="--x: 1; --y: 0">
+            <span style="--i: 3"></span>
+            <span style="--i: 2"></span>
+            <span style="--i: 1"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end home cube -->
+
+    <section class="container featured-tips">
+      <header class="featured-tips__header">
+        <h2 class="featured-tips__heading">
+          I have some technical tricks i want to share
+        </h2>
+        <a href="/tips" class="featured-tips__more">Read theme all</a>
+      </header>
+      <div class="featured-tips__list">
+        {% for tip in site.tips limit=3 %}
+        <article class="featured-tip">
+          <a class="featured-tip__link" href="{{ tip.url | relative_url }}">
+            <figure class="featured-tip__thumbnail-wraper">
+              <img
+                class="featured-tip__thumbnail"
+                src="{{ tip.thumbnail | relative_url }}"
+                alt="{{ tip.title }}"
+              />
+            </figure>
+            <h3 class="featured-tip__title">{{ tip.title }}</h3>
+          </a>
+          <ul class="featured-tip__tags">
+            {% for tag in tip.tags %}
+            <li><span class="featured-tip__tag"> {{ tag }} </span></li>
+            {% endfor %}
+          </ul>
+          <!-- <p class="featured-tip__excrept">{{ tip.excerpt }}</p> -->
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    <!-- end featured tips -->
+  </div>
+  <!-- end dark wraper -->
+</main>

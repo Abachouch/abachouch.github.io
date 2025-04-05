@@ -1,37 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
 @font-face {
-    font-family: "Cormorant";
-    src: url('../assets/fonts/Cormorant-VariableFont_wght.ttf') format('truetype');
-  }
+  font-family: "Cormorant";
+  src: url("../assets/fonts/Cormorant-VariableFont_wght.ttf") format("truetype");
+}
 
-  @font-face {
-    font-family: "Inter";
-    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
-  }
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+    format("truetype");
+}
 
-  body{
-    font-family: Inter, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: var(--text-color)
-  }
-  body.nav-open{
-    overflow: hidden ;
-  }
+// .urbanist-bold {
+//   font-family: "Urbanist", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: 900;
+//   font-style: normal;
+// }
 
-@import './variables';
-@import './mixins';
-@import './base';
-@import './btn';
-@import './layout';
-@import './nav';
-@import './home/hero';
-@import './home/featured-work';
-@import './home/featured-projects';
-@import './home/home-about';
-@import './home/skills';
-@import './home/services';
-@import './home/featured-snipets';
-@import './cta';
-@import './footer';
-
-
-
+@import "./variables";
+@import "./mixins";
+@import "./utils";
+@import "./base";
+@import "./syntax-highlighting";
+@import "./btn";
+@import "./layout";
+@import "./nav";
+@import "./home/hero";
+@import "./home/brandsbelt";
+@import "./home/featured-work";
+@import "./home/featured-projects";
+@import "./home/home-about";
+@import "./home/home-cube";
+@import "./home/skills";
+@import "./home/services";
+@import "./home/featured-snipets";
+@import "./cta";
+@import "./footer";
+@import "./socials.scss";
+@import "./tip.scss";

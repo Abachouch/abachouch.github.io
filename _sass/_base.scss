@@ -1,24 +1,96 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-    margin: 0;
+body {
+  font-family: var(--font-body);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
+}
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  &:hover {
+    color: var(--link-hover-color);
+  }
+}
+img,
+video,
+svg {
+  width: 100%;
+  height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--heading-color);
+  font-family: var(--font-heading);
+}
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-a{
-    color: currentColor;
-    text-decoration: none;
+figure {
+  margin: 0;
 }
-img , video , svg{
-    width: 100%;
-    height: auto;
+
+h1 {
+  margin-block: 1rem;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-variation-settings: "wght" 900;
+  line-height: 120%;
+  @include sm {
+    @include responsive-font(4vw, 40px, 72px, 50px);
+  }
 }
-h1, h2 ,h3 ,h4 , h5 , h6{
-    margin: 0 ;
+
+h2 {
+  margin-block: 2rem 1rem;
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  line-height: 130%;
+  @include sm {
+    @include responsive-font(10vw, 28px, 38px, 50px);
+  }
 }
-ul,ol{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+
+h3 {
+  margin-block: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  line-height: 130%;
+  @include sm {
+    @include responsive-font(10vw, 16px, 18px, 50px);
+  }
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 140%;
+  font-weight: 500;
+  @include sm {
+    font-size: 1.3rem;
+    line-height: 140%;
+  }
+}
+
+code {
+  line-height: 140%;
+  font-size: 1.1rem;
+  @include sm {
+    font-size: 1.3rem;
+  }
 }

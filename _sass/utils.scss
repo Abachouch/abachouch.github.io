@@ -1,0 +1,14 @@
+.dark-wraper {
+  --background-color: #121212;
+  --text-color: white;
+  --heading-color: white;
+  --link-color: #ffffff; /* Hyperlink color */
+  --link-hover-color: #a2a2a2;
+  background-color: var(--background-color);
+  background-image: url("/assets/images/grain\ background\ black.png");
+  background-blend-mode: color-burn;
+}
+
+.white-wraper {
+  background-color: #ffffff;
+}

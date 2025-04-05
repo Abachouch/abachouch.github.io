@@ -1,17 +1,22 @@
-.btn{
-    padding: .75rem 2rem;
-    border-radius: 4px;
-    color: var(--text-color);
-    transition: all 500ms ease;
-    width: fit-content;
-    border: 1px solid var(--text-color) ;
-    &:hover{
-        background-color: white;
-        color: var(--text-color);
-        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.10);
-    }
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  color: var(--btn-color);
+  transition: all 500ms ease;
+  width: fit-content;
+  display: block;
+  text-align: center;
+  border: 1px solid var(--btn-color);
+  box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  &:hover {
+    background-color: var(--btn-background);
+    color: var(--btn-color);
+    box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.25);
+  }
 }
-.btn--cta{
-    background-color: white;
-    border: 1px solid transparent ;
+.btn--cta {
+  background-color: var(--btn-background);
+  color: var(--btn-color);
+  border: 1px solid transparent;
 }

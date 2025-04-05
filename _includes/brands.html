@@ -1,0 +1,98 @@
+<div class="brandsbelt">
+  <ul id="homeBrandsbelt" class="brandsbelt-list">
+    <li class="brandsbelt-item">
+      <img
+        class="brandsbelt-logo"
+        src="/assets/images/React-logo-vector-01 1.png"
+        alt="ReactJS"
+      />
+    </li>
+    <li class="brandsbelt-item">
+      <img
+        class="brandsbelt-logo"
+        src="/assets/images/Electron-logo-vector-01 1.png"
+        alt="Electron"
+      />
+    </li>
+    <li class="brandsbelt-item">
+      <img
+        class="brandsbelt-logo"
+        src="/assets/images/CSS-3-logo-vector-01 1.png"
+        alt="CSS"
+      />
+    </li>
+    <li class="brandsbelt-item">
+      <img
+        class="brandsbelt-logo"
+        src="/assets/images/HTML-5-logo-vector-01 1.png"
+        alt="HTML"
+      />
+    </li>
+    <li class="brandsbelt-item">
+      <img
+        class="brandsbelt-logo"
+        src="/assets/images/Aws-icon-vector-01 1.png"
+        alt="AWS"
+      />
+    </li>
+    <li class="brandsbelt-item">
+      <img
+        class="brandsbelt-logo"
+        src="/assets/images/WordPress-logo-vector-01 1.png"
+        alt="WordPress"
+      />
+    </li>
+    <li class="brandsbelt-item">
+      <img
+        class="brandsbelt-logo"
+        src="/assets/images/JavaScript-logo-vector-01 1.png"
+        alt="JavaScript"
+      />
+    </li>
+    <li class="brandsbelt-item">
+      <img
+        class="brandsbelt-logo"
+        src="/assets/images/Node-JS-logo-vector-01 1.png"
+        alt="Node.js"
+      />
+    </li>
+    <li class="brandsbelt-item">
+      <img
+        class="brandsbelt-logo"
+        src="/assets/images/Sass-logo-vector-01 1.png"
+        alt="Sass"
+      />
+    </li>
+    <li class="brandsbelt-item">
+      <img
+        class="brandsbelt-logo"
+        src="/assets/images/Git-wordmark-icon-vector-01 1.png"
+        alt="Git"
+      />
+    </li>
+    <li class="brandsbelt-item">
+      <img
+        class="brandsbelt-logo"
+        src="/assets/images/Nextjs-icon-vector-01 1.png"
+        alt="Next.js"
+      />
+    </li>
+  </ul>
+</div>
+
+<script>
+  // window.addEventListener('scroll', () => {
+  //     console.log('scrolling' , window.scrollX);
+  //     const container = document.querySelector('.brandsbelt');
+  //     container.style.transform = `translateX(-${window.scrollX}px)`;
+  // });
+
+  const brandsList = document.getElementById("homeBrandsbelt");
+  console.log(brandsList);
+  const brandsLenght = brandsList.childElementCount;
+
+  for (let i = 0; i < brandsLenght; i++) {
+    const clone = brandsList.children[i].cloneNode(true);
+    brandsList.appendChild(clone);
+  }
+</script>

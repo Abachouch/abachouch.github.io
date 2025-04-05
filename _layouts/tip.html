@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<main class="tip">
+  <header class="container tip__header">
+    <h1 class="tip__title">{{ page.title | escape }}</h1>
+    <figure>
+      <img
+        src="{{ page.thumbnail | relative_url }}"
+        alt=" {{ page.title}} thumbnail "
+      />
+    </figure>
+  </header>
+
+  <div class="container tip__body">
+    <aside></aside>
+
+    <div>
+      <p class="tip__exrept">{{ page.exrept }}</p>
+      <article class="tip__content">{{ content }}</article>
+    </div>
+  </div>
+</main>

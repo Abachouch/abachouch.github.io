@@ -26,7 +26,40 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://abachouch.online" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: y0u553f
 github_username: A.Youssouf
+linkedin_username: efdfwef
+facebook_username: qjf8o
+instagram_username: jiwjefj
+dribbble_username: jiejee
+rss: true
 google_analytics: G-2RJ308YXWK
+
+include:
+  - _pages
+
+collections:
+  works:
+    output: true
+    permalink: /work/:title/
+  tips:
+    output: true
+    permalink: /tips/:title/
+  projects:
+    output: true
+    permalink: /projects/:title/
+
+nav_links:
+  - name: Home
+    link: /
+  - name: Side Projects
+    link: /side-projects/
+  - name: Work Case Studies
+    link: /work/
+  - name: About
+    link: /about/
+  - name: Tips and Tricks
+    link: /tips/
+  - name: Contact Me
+    link: /contact/
 
 # Build settings
 theme: minima
@@ -51,3 +84,4 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+

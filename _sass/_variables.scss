@@ -1,10 +1,25 @@
-$maxContainerWidth : 1200px ;
-$padding : ("sm":1rem ,"md" :2rem ) ;
+$maxContainerWidth: 1400px; // 1440px 1900px
+$maxMeduimContainerWidth: 1200px;
+$padding: (
+  "sm": 1rem,
+  "md": 2rem,
+);
 
-:root{
-    --heading-color : #0D0E25 ;
-    --body-color: #000 ;
-    --text-color : #0D0E25 ;
-    --subtext-color : #4e4e66 ;
-    --link-color : blue ;
+:root {
+  --font-body: "Urbanist", "Arial Narrow Bold", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  --background-color: #ffffff;
+  --heading-color: #06021e;
+  --text-color: #000000;
+  --muted-text-color: #888; /* Less important text (labels, metadata) */
+  --disabled-text-color: #8e8e8e; /* Disabled or inactive text */
+  --link-color: #000000; /* Hyperlink color */
+  --link-hover-color: #484848; /* Hovered hyperlink color */
+  --primary-color: #f006dc;
+  --secondary-color: #f006dc;
+  --btn-background: white;
+  --btn-color: rgb(0, 0, 0);
+  --accent-color: #ff4081;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }

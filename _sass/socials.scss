@@ -1,0 +1,14 @@
+.social-media {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  a {
+  }
+  &__icon {
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }
+}

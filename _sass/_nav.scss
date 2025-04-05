@@ -1,300 +1,275 @@
+body.nav-open {
+  overflow: hidden;
+}
+
 .nav {
-    position: fixed;
-    z-index: 9999999;
-    top: 0;
-    right: 0;
-    left: 0;
-    padding: .5rem 0;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.099);
-    color: rgb(0, 0, 0);
-    background-position: center;
-    background-image: none;
-    transition: all 200ms ease, background-image 0s ease 1s; /* Separate transitions */
-    
-    @include sm {}
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0.5rem 0;
+  --background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--background-color);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  color: var(--heading-color);
+  background-position: center;
+  background-image: none;
+  transition: all 200ms ease, background-image 0s ease 1s; /* Separate transitions */
+  ul {
+    margin: 2rem 0 0 0;
+  }
 
-    ul {
-        list-style: none;
-        margin: 2rem 0 0 0;
-    }
+  li {
+    font-family: var(--font-heading);
+  }
 
-    li {
-        font-family: Cormorant, Times, serif;
-    }
-
-    h3 {
-        color: rgb(255, 255, 255);
-        font-family: Inter;
-        font-weight: 700;
-    }
-
-    &__me{
-        display: grid;
-        grid-template-columns: auto auto;
-        column-gap: 1rem;
-        justify-content: center;
-        align-items: center;
-        color: var(--heading-color);
-
-        &__avatar{
-            &-wraper{
-                grid-row: span 2;
-                isolation: isolate;
-                --border-width: 2px;
-                --radius: 100%;
-                position: relative;
-                border-radius: var(--radius);
-                border: var(--border-width) solid transparent;
-
-                &::before {
-                    content: " ";
-                    position: absolute;
-                    inset: calc(var(--border-width) * -1);
-                    z-index: -1;
-                    border: inherit;
-                    border-radius: inherit;
-                    background-image: conic-gradient(from var(--angle), #381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 100%);
-                    background-origin: border-box;
-                    -webkit-mask:
-                      linear-gradient(black, black) content-box,
-                      linear-gradient(black, black);  
-                    mask: linear-gradient(black, black),
-                          linear-gradient(black, black);
-                    -webkit-mask-clip: content-box, border-box;  
-                    mask-clip: content-box, border-box;
-                    -webkit-mask-composite: xor;  
-                    mask-composite: exclude;
-                    animation: spin 3s linear infinite;
-                  }
-
-            }
-            display: block;
-            border-radius: 100%;
-            height: auto;
-            width: 48px;
-        }
-        &__name{
-            font-weight: 700;
-            font-size: .85rem;
-            align-self: end;
-            @include sm {
-                font-size: 1rem;
-            }
-        }
-        &__prof{
-            font-weight: 400;
-            align-self: baseline;
-            @include sm {
-                font-size: 1rem;
-            }
-        }
-    }
-
-    &__toggle {
-        cursor: pointer;
-        background-color: transparent;
-        color: currentColor;
-        display: flex;
-        align-items: start;
-        flex-direction: row;
-        column-gap: 2rem;
+  &__me {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    &__avatar {
+      display: block;
+      border-radius: 100%;
+      width: 48px;
+      height: 48px;
+      &-wraper {
+        grid-row: span 2;
+        isolation: isolate;
+        --border-width: 2px;
+        --radius: 100%;
         position: relative;
-        border: 1px solid currentColor;
-        padding: 8px 12px;
-        &:hover{
-            .nav__toggle__icon {
-            gap: 8px;
-            }
-        }
+        border-radius: var(--radius);
+        border: var(--border-width) solid transparent;
 
-        &__icon {
-            height: 13px;
-            width: 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            align-items: center;
-            justify-content: center;
-            margin: 1px;
-            transition: gap 100ms ease;
-            
+        &::before {
+          content: " ";
+          position: absolute;
+          inset: calc(var(--border-width) * -1);
+          z-index: -1;
+          border: inherit;
+          border-radius: inherit;
+          background-image: conic-gradient(
+            from var(--angle),
+            #381d6a 80%,
+            #e0d1ff 88%,
+            #e0d1ff 92%,
+            #381d6a 100%
+          );
+          background-origin: border-box;
+          -webkit-mask: linear-gradient(black, black) content-box,
+            linear-gradient(black, black);
+          mask: linear-gradient(black, black), linear-gradient(black, black);
+          -webkit-mask-clip: content-box, border-box;
+          mask-clip: content-box, border-box;
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          animation: spin 3s linear infinite;
         }
-        &__line{
-            display: block;
-            // left: 15px;
-            content: '';
-           
-            width: 100%;
-            border-top: 2px currentColor solid;
-            background-color: currentColor;
-            transition: transform 200ms ease;
-            transform-origin: bottom ;
-        }
-        &__label {
-            display: none;
-            @include sm {
-                display: block;
-            }
-        }
+      }
+    }
+    &__name {
+      font-weight: 700;
+      font-size: 0.85rem;
+      align-self: end;
+      @include sm {
+        font-size: 1rem;
+      }
+    }
+    &__prof {
+      font-weight: 400;
+      align-self: baseline;
+      @include sm {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__toggle {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--heading-color);
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    column-gap: 2rem;
+    position: relative;
+    border: 1px solid var(--heading-color);
+    padding: 8px 12px;
+    &:hover {
+      .nav__toggle__icon {
+        gap: 8px;
+      }
     }
 
-    &__content {
-        height: 0;
-        overflow: auto;
-        min-height: 100%;
-        
+    &__icon {
+      height: 13px;
+      width: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      margin: 1px;
+      transition: gap 100ms ease;
     }
-    
+    &__line {
+      display: block;
+      // left: 15px;
+      content: "";
 
-    &.open {
-        background-image: url('/imgs/1.gif');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-blend-mode: lighten;
-        
-        background-color: #362447;
+      width: 100%;
+      border-top: 2px var(--heading-color) solid;
+      background-color: var(--heading-color);
+      transition: transform 200ms ease;
+      transform-origin: bottom;
+    }
+    &__label {
+      display: none;
+      @include sm {
+        display: block;
+      }
+    }
+  }
 
-        height: 100dvh;
-        grid-template-rows: min-content 1fr;
-        color: rgb(255, 255, 255);
-        --heading-color : white ;
+  &__content {
+    height: 0;
+    overflow: auto;
+    min-height: 100%;
+  }
 
-        .container{
-            display: grid;
-            grid-template-rows: min-content auto;
-            height: 100%;
+  &.open {
+    --heading-color: white;
+    --background-color: #362447;
+    background-image: url("/assets/images/1.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: lighten;
+    height: 100dvh;
+    grid-template-rows: min-content 1fr;
+
+    .container {
+      display: grid;
+      grid-template-rows: min-content auto;
+      height: 100%;
+    }
+
+    & .nav__content {
+      display: flex;
+
+      flex-direction: column;
+      gap: 3rem;
+      justify-content: space-between;
+    }
+
+    .nav__link {
+      &:nth-child(1) a {
+        animation-delay: 0ms;
+      }
+
+      &:nth-child(2) a {
+        animation-delay: 200ms;
+      }
+
+      &:nth-child(3) a {
+        animation-delay: 400ms;
+      }
+
+      &:nth-child(4) a {
+        animation-delay: 600ms;
+      }
+
+      &:nth-child(5) a {
+        animation-delay: 800ms;
+      }
+
+      a {
+        transform: translateX(-400px);
+        animation-name: slidetoright;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    .nav__toggle {
+      &__icon {
+        gap: 0;
+      }
+
+      &__line {
+        &:nth-child(1) {
+          transform: rotate(45deg) translateY(1px);
+          transform-origin: center;
         }
 
-        & .nav__content {
-            display: flex;
-            
-            flex-direction: column;
-            gap: 3rem;
-            justify-content: space-between;
+        &:nth-child(2) {
+          transform: rotate(-45deg) translateY(-1px);
+          transform-origin: center;
         }
-        
-
-        .nav__link {
-
-            &:nth-child(1) a {
-                animation-delay: 0ms;
-            }
-
-            &:nth-child(2) a {
-                animation-delay: 200ms;
-            }
-
-            &:nth-child(3) a {
-                animation-delay: 400ms;
-            }
-
-            &:nth-child(4) a {
-                animation-delay: 600ms;
-            }
-
-            &:nth-child(5) a {
-                animation-delay: 800ms;
-            }
-
-            a {
-                transform: translateX(-400px);
-                animation-name: slidetoright;
-                animation-duration: 500ms;
-                animation-fill-mode: forwards;
-            }
-        }
-
-        .nav__toggle {
-            &__icon{
-                gap: 0;
-            }
-
-            &__line {
-                &:nth-child(1) {
-                    transform: rotate(45deg )  translateY(1px);
-                    transform-origin: center;
-                }
-
-                &:nth-child(2) {
-                    transform: rotate(-45deg)  translateY(-1px);
-                    transform-origin: center;
-                }
-            }
-        }
+      }
     }
+  }
 
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  &__link {
+    font-size: 2rem;
+    @include responsive-font(5vw, 35px, 64px, 50px);
+
+    a {
+      display: inline-block;
+      transition: margin-left 200ms ease;
+      color: var(--heading-color);
+      &:hover {
+        transition-delay: 0ms;
+        margin-left: 1rem;
+      }
     }
+  }
 
-    &__links {}
-
-    &__link {
-        font-size: 2rem;
-        @include responsive-font(5vw, 35px, 64px, 50px);
-
-
-
-        a {
-            display: inline-block;
-            transition: margin-left 200ms ease ;
-            &:hover {
-                transition-delay: 0ms;
-                margin-left: 1rem;
-            }
-        }
+  &__socials {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 1rem;
+    a {
+      color: var(--heading-color);
     }
-
-    &__tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-
-        &-wraper {
-            flex-grow: 1;
-        }
-    }
-
-    &__tag {
-        font-size: 1.2rem;
-    }
-
-    &__socials {
-        display: flex;
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
+  }
 }
 
 @keyframes slidetoright {
-    to {
-        transform: translateX(0);
-    }
+  to {
+    transform: translateX(0);
+  }
 }
 
-
 @supports not (background: paint(something)) {
-    .nav__me__avatar::before {
-  background-image: conic-gradient(#381D6A 80%, #E0D1FF 88%, #E0D1FF 92%, #381D6A 100%);    
-    }
+  .nav__me__avatar::before {
+    background-image: conic-gradient(
+      #381d6a 80%,
+      #e0d1ff 88%,
+      #e0d1ff 92%,
+      #381d6a 100%
+    );
   }
+}
 
-  
 @property --angle {
-    syntax: "<angle>";
-    inherits: true;
-    initial-value: 0turn;
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+@keyframes spin {
+  to {
+    --angle: 1turn;
   }
-  
-  @keyframes spin {
-    to {
-      --angle: 1turn;
-    }
-  }
-  
+}
