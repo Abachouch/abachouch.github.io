@@ -144,10 +144,10 @@ body.nav-open {
   &.open {
     --heading-color: white;
     --background-color: #362447;
-    background-image: url("/assets/images/1.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-blend-mode: lighten;
+    // background-image: url("/assets/images/1.gif");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-blend-mode: lighten;
     height: 100dvh;
     grid-template-rows: min-content 1fr;
 
