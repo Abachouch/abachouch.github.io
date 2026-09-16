@@ -11,12 +11,21 @@
     "statusBar.background": "#4d0606",
     "statusBar.foreground": "#e7e7e7",
     "statusBarItem.hoverBackground": "#7c0a0a",
-    "statusBarItem.remoteBackground": "#4d0606",
+    "statusBarItem.remoteBackground": "#097609",
     "statusBarItem.remoteForeground": "#e7e7e7",
     "titleBar.activeBackground": "#4d0606",
     "titleBar.activeForeground": "#e7e7e7",
     "titleBar.inactiveBackground": "#4d060699",
-    "titleBar.inactiveForeground": "#e7e7e799"
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "activityBar.activeBorder": "#e7e7e7",
+    "activityBarTop.activeBackground": "#7c0a0a",
+    "activityBarTop.activeBorder": "#e7e7e7",
+    "activityBarTop.background": "#7c0a0a",
+    "activityBarTop.foreground": "#e7e7e7",
+    "activityBarTop.inactiveForeground": "#e7e7e799",
+    "commandCenter.foreground": "#e7e7e7",
+    "statusBar.debuggingBackground": "#4d0606",
+    "statusBar.debuggingForeground": "#e7e7e7"
   },
   "peacock.color": "#4d0606",
   "editor.defaultFormatter": "esbenp.prettier-vscode"
